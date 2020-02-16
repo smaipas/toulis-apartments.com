@@ -1,23 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" temporary app>
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in menuItems"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+    <Drawer v-model="drawer" :menu-items="menuItems" @go-to-path="goToPath" />
     <Header
       :menu-items="menuItems"
       @toggle-drawer="toggleDrawer"
@@ -28,9 +11,7 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }} Toulis Apartments</span>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
@@ -39,10 +20,12 @@
  * Website layout.
  */
 import Header from '@/components/common/Header.vue';
+import Footer from '@/components/common/Footer.vue';
+import Drawer from '@/components/common/Drawer.vue';
 
 export default {
   name: 'DefaultLayout',
-  components: { Header },
+  components: { Header, Footer, Drawer },
   data() {
     return {
       drawer: false,

@@ -13,32 +13,25 @@
         <v-spacer></v-spacer>
         <div class="header__right">
           <v-app-bar-nav-icon
-            v-if="$vuetify.breakpoint.xsOnly"
+            class="d-flex d-sm-none"
             @click.stop="toggleDrawer"
           />
-          <template v-else>
-            <div class="header__lang-selector">
-              <NuxtLink :to="switchLocalePath('en')">
-                <v-img :src="flagEn" height="25px" contain />
-              </NuxtLink>
-              <NuxtLink :to="switchLocalePath('el')">
-                <v-img :src="flagEl" height="25px" contain />
-              </NuxtLink>
-              <NuxtLink :to="switchLocalePath('rs')">
-                <v-img :src="flagRs" height="25px" contain />
-              </NuxtLink>
+          <div class="header__lang-selector d-none d-sm-flex">
+            <LanguageSelector />
+          </div>
+          <div
+            v-if="menuItems && menuItems.length"
+            class="header__nav d-none d-sm-flex"
+          >
+            <div
+              v-for="item in menuItems"
+              :key="item.to"
+              :class="isNavActive(item.routeName) ? 'nav--active' : ''"
+              @click="goToPath(item.routeName)"
+            >
+              {{ $t(item.title) }}
             </div>
-            <div v-if="menuItems && menuItems.length" class="header__nav">
-              <div
-                v-for="item in menuItems"
-                :key="item.to"
-                :class="isNavActive(item.routeName) ? 'nav--active' : ''"
-                @click="goToPath(item.routeName)"
-              >
-                {{ $t(item.title) }}
-              </div>
-            </div>
-          </template>
+          </div>
         </div>
       </div>
     </v-container>
@@ -50,12 +43,11 @@
  * Website header.
  */
 import logo from '@/static/toulis-logo.svg';
-import flagEn from '@/static/flags/en.png';
-import flagEl from '@/static/flags/gr.png';
-import flagRs from '@/static/flags/rs.png';
+import LanguageSelector from '@/components/common/LanguageSelector.vue';
 
 export default {
   name: 'Header',
+  components: { LanguageSelector },
   props: {
     menuItems: { type: Array, default: null },
   },
@@ -63,9 +55,6 @@ export default {
     return {
       title: 'Toulis apartments',
       logo,
-      flagEn,
-      flagEl,
-      flagRs,
     };
   },
   methods: {
@@ -101,9 +90,6 @@ export default {
     display: flex;
     justify-content: flex-end;
     margin-top: 1.3em;
-    & :not(:last-child) {
-      margin-right: 0.5em;
-    }
   }
   &__nav {
     display: flex;
@@ -122,7 +108,7 @@ export default {
   }
 }
 .nav--active {
-  font-weight: bold;
+  font-weight: 500;
   color: var(--v-primary-base);
 }
 </style>
