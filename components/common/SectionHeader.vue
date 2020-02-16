@@ -16,7 +16,7 @@ export default {
   name: 'SectionHeader',
   props: {
     tag: { type: String, default: 'div' },
-    margin: { type: String, default: '' },
+    margin: { type: String, default: '2em 0 1em' },
   },
 };
 </script>
