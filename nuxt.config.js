@@ -58,11 +58,11 @@ export default {
         defaultLocale: 'en',
         vueI18n: {
           fallbackLocale: 'en',
-          messages: {
-            en,
-            el,
-            rs,
-          },
+          messages: { en, el, rs },
+        },
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
         },
       },
     ],
@@ -79,6 +79,9 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      options: {
+        customProperties: true,
+      },
       themes: {
         light: {
           primary: '#409DCD',

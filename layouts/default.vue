@@ -18,7 +18,11 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <Header @toggle-drawer="toggleDrawer" />
+    <Header
+      :menu-items="menuItems"
+      @toggle-drawer="toggleDrawer"
+      @go-to-path="goToPath"
+    />
     <v-content>
       <v-container>
         <nuxt />
@@ -44,14 +48,24 @@ export default {
       drawer: false,
       menuItems: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'nav.home',
           to: '/',
+          routeName: 'index',
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Contact',
+          title: 'nav.apartments',
+          to: '/apartments',
+          routeName: 'apartments',
+        },
+        {
+          title: 'nav.halkidiki',
+          to: '/halkidiki',
+          routeName: 'halkidiki',
+        },
+        {
+          title: 'nav.contact',
           to: '/contact',
+          routeName: 'contact',
         },
       ],
       title: 'Vuetify.js',
@@ -63,6 +77,12 @@ export default {
      */
     toggleDrawer() {
       this.drawer = !this.drawer;
+    },
+    /**
+     * Go to path.
+     */
+    goToPath(name) {
+      this.$router.push({ name: `${name}___${this.$i18n.locale}` });
     },
   },
 };
