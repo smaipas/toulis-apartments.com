@@ -1,4 +1,7 @@
 import colors from 'vuetify/es5/util/colors';
+import en from './locales/en.js';
+import el from './locales/el.js';
+import rs from './locales/rs.js';
 
 export default {
   mode: 'universal',
@@ -30,7 +33,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  // plugins: ['~/plugins/i18n.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -48,6 +51,21 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    [
+      'nuxt-i18n',
+      {
+        locales: ['en', 'el', 'rs'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en,
+            el,
+            rs,
+          },
+        },
+      },
+    ],
   ],
   /*
    ** Axios module configuration

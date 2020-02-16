@@ -18,11 +18,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-    </v-app-bar>
+    <Header @toggle-drawer="toggleDrawer" />
     <v-content>
       <v-container>
         <nuxt />
@@ -35,7 +31,14 @@
 </template>
 
 <script>
+/**
+ * Website layout.
+ */
+import Header from '@/components/common/Header.vue';
+
 export default {
+  name: 'DefaultLayout',
+  components: { Header },
   data() {
     return {
       drawer: false,
@@ -53,6 +56,14 @@ export default {
       ],
       title: 'Vuetify.js',
     };
+  },
+  methods: {
+    /**
+     * Toggle drawer.
+     */
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
   },
 };
 </script>
