@@ -117,11 +117,11 @@ export default {
   },
   reservationForm: {
     h: 'REZERVACIONI FORMULAR',
-    name: 'Ime i prezime:',
-    email: 'E-mail:',
-    checkIn: 'Datum dolaska:',
-    checkOut: 'Datum odlaska:',
-    moreInfo: 'Više informacija:',
+    name: 'Ime i prezime',
+    email: 'E-mail',
+    checkIn: 'Datum dolaska',
+    checkOut: 'Datum odlaska',
+    moreInfo: 'Više informacija',
     send: 'Poslati',
   },
 };

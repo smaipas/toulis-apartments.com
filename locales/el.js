@@ -117,11 +117,11 @@ export default {
   },
   reservationForm: {
     h: 'ΦΟΡΜΑ ΚΡΑΤΗΣΗΣ',
-    name: 'Όνομα:',
-    email: 'E-mail:',
-    checkIn: 'Check in:',
-    checkOut: 'Check out:',
-    moreInfo: 'Περισσότερες πληροφορίες:',
-    send: 'Αποστολή',
+    name: 'Όνομα',
+    email: 'E-mail',
+    checkIn: 'Check in',
+    checkOut: 'Check out',
+    moreInfo: 'Περισσότερες πληροφορίες',
+    send: 'Αποστολη',
   },
 };

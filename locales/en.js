@@ -119,11 +119,11 @@ export default {
   },
   reservationForm: {
     h: 'RESERVATION FORM',
-    name: 'Name:',
-    email: 'E-mail:',
-    checkIn: 'Check in:',
-    checkOut: 'Check out:',
-    moreInfo: 'More info:',
+    name: 'Name',
+    email: 'E-mail',
+    checkIn: 'Check in',
+    checkOut: 'Check out',
+    moreInfo: 'More info',
     send: 'Send',
   },
 };
