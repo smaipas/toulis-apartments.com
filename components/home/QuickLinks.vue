@@ -7,7 +7,12 @@
           :key="i"
           class="d-flex justify-center"
         >
-          <v-card elevation="0" class="ql__card" tag="figure">
+          <v-card
+            elevation="0"
+            class="ql__card"
+            tag="figure"
+            @click="goToPath(item.routeName)"
+          >
             <v-img :src="item.img" :alt="item.imgAlt" />
             <figcaption class="ql__card-text" tag="">
               {{ $t(item.title) }}
@@ -36,19 +41,30 @@ export default {
           title: 'home.quickLinks.t1',
           img: img1,
           imgAlt: 'Make reservation in our apartments',
+          routeName: 'contact',
         },
         {
           title: 'home.quickLinks.t2',
           img: img2,
           imgAlt: 'View our apartments',
+          routeName: 'apartments',
         },
         {
           title: 'home.quickLinks.t3',
           img: img3,
           imgAlt: 'See our apartment offers',
+          routeName: 'apartments',
         },
       ],
     };
+  },
+  methods: {
+    /**
+     * Go to path.
+     */
+    goToPath(name) {
+      this.$router.push({ name: `${name}___${this.$i18n.locale}` });
+    },
   },
 };
 </script>
