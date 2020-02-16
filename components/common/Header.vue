@@ -1,12 +1,5 @@
 <template>
-  <v-app-bar
-    app
-    :style="
-      `border-top: 0.35em solid ${$vuetify.theme.themes.light.primary}; background-color: white;`
-    "
-    height="145"
-    elevation="0"
-  >
+  <v-app-bar app class="header__container" height="145" elevation="0">
     <v-container>
       <div style="display: flex;">
         <div class="header__logo">
@@ -100,6 +93,10 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  &__container {
+    border-top: 0.35em solid var(--v-primary-base);
+    background-color: white !important;
+  }
   &__lang-selector {
     display: flex;
     justify-content: flex-end;
