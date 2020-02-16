@@ -6,7 +6,7 @@ export default {
     contact: 'Contact',
   },
   home: {
-    threeboxes: {
+    quickLinks: {
       t1: 'Make a Reservation',
       t2: 'View our Apartments',
       t3: 'Prices and Offers',

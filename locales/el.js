@@ -6,7 +6,7 @@ export default {
     contact: 'Επικοινωνια',
   },
   home: {
-    threeboxes: {
+    quickLinks: {
       t1: 'Κάντε Κράτηση',
       t2: 'Δείτε τα Διαμερίσματα',
       t3: 'Τιμές και Προσφορές',

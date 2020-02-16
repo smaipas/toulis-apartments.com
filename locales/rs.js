@@ -6,7 +6,7 @@ export default {
     contact: 'Kontakt',
   },
   home: {
-    threeboxes: {
+    quickLinks: {
       t1: 'Rezervisati',
       t2: 'Pogledajte naše apartmane',
       t3: 'Cene i ponuda',
