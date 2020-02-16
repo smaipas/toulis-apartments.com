@@ -1,5 +1,5 @@
 <template>
-  <v-carousel hide-delimiter-background show-arrows-on-hover>
+  <v-carousel cycle hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item
       v-for="(item, i) in sliderItems"
       :key="i"
