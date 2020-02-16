@@ -1,0 +1,34 @@
+<template>
+  <component
+    :is="tag"
+    class="section__header"
+    :style="margin ? `margin: ${margin}` : ''"
+  >
+    <slot></slot>
+  </component>
+</template>
+
+<script>
+/**
+ * Section header component.
+ */
+export default {
+  name: 'SectionHeader',
+  props: {
+    tag: { type: String, default: 'div' },
+    margin: { type: String, default: '' },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.section__header {
+  color: var(--v-accent-lighten1);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 0.25em 0;
+  margin: 1em 0;
+  border-bottom: 1px solid var(--v-accent-lighten5);
+  text-align: center;
+}
+</style>
