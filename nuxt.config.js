@@ -33,7 +33,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/validation.js'],
+  plugins: ['~/plugins/validation.js', '~/plugins/api.js'],
   /*
    ** Nuxt.js dev-modules
    */

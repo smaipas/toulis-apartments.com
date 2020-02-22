@@ -149,7 +149,7 @@
       {{ notificationMessage }}
       <v-btn
         :color="formHasError ? 'red' : 'green'"
-        flat
+        text
         @click="showNotification = false"
       >
         Close
@@ -232,8 +232,7 @@ export default {
           checkOut: this.formatDate(checkOut),
           message,
         };
-        await this.clearForm(); // this needs to be changed to actual api call
-        console.log(data);
+        await this.$api.post('/contact/submit-reservation', data);
         this.clearForm();
         this.notificationMessage =
           'Your message has been submitted successfully!';

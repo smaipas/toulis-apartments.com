@@ -1,0 +1,5 @@
+Name: {{name}}
+Email: {{email}}
+{{#if checkIn}}Check In: {{checkIn}}{{/if}}
+{{#if checkOut}}Check Out: {{checkOut}}{{/if}}
+{{#if message}}Message: {{message}}{{/if}}
