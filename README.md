@@ -73,8 +73,8 @@ This project uses serverless framework to deploy our reservation/contact form la
 
 `/aws/lambda/serverless.yml`
 
-### 3. Deploy
+### 3. Deploy lambda function for contact form
 
 ```bash
-sls deploy
+serverless deploy
 ```
