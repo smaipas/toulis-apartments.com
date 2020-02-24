@@ -53,7 +53,6 @@ export default {
   },
   data() {
     return {
-      title: 'Toulis apartments',
       logo,
     };
   },

@@ -48,6 +48,7 @@
                 prepend-inner-icon="mdi-account"
                 :label="$t('reservationForm.name')"
                 :error-messages="$validatorError($v.form.name)"
+                data-test="nameInput"
                 :disabled="loading"
                 outlined
                 @input="$v.form.name.$touch()"
@@ -58,6 +59,7 @@
                 prepend-inner-icon="mdi-email"
                 :label="$t('reservationForm.email')"
                 :error-messages="$validatorError($v.form.email)"
+                data-test="emailInput"
                 :disabled="loading"
                 outlined
                 @input="$v.form.email.$touch()"
@@ -72,6 +74,7 @@
                     offset-y
                     max-width="290px"
                     min-width="290px"
+                    data-test="checkInInput"
                   >
                     <template v-slot:activator="{ on }">
                       <v-text-field
@@ -102,6 +105,7 @@
                     offset-y
                     max-width="290px"
                     min-width="290px"
+                    data-test="checkOutInput"
                   >
                     <template v-slot:activator="{ on }">
                       <v-text-field
@@ -130,6 +134,7 @@
                 v-model="form.message"
                 :label="$t('reservationForm.moreInfo')"
                 :error-messages="$validatorError($v.form.message)"
+                data-test="messageInput"
                 :disabled="loading"
                 outlined
                 rows="8"
@@ -140,7 +145,12 @@
         </v-col>
       </v-row>
       <div class="text-center">
-        <v-btn color="primary" :loading="loading" @click="submit">
+        <v-btn
+          color="primary"
+          :loading="loading"
+          data-test="submitBtn"
+          @click="submit"
+        >
           {{ $t('reservationForm.send') }}
         </v-btn>
       </div>
