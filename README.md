@@ -19,7 +19,7 @@ $ npm run start
 $ npm run generate
 ```
 
-## Email Service
+## Setup Email Template and Lamdba function
 This project uses AWS Lambda and AWS SES services to submit contact/reservation form.
 
 ### 1. Prepare the Email Template
