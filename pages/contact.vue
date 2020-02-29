@@ -218,11 +218,6 @@ export default {
       },
     };
   },
-  head() {
-    return {
-      title: this.$t('nav.contact'),
-    };
-  },
   validations: {
     form: {
       name: { required, minLength: minLength(2), maxLength: maxLength(25) },
@@ -280,6 +275,11 @@ export default {
     formatDate(date) {
       return date ? format(new Date(date), 'dd-MM-yyyy') : '';
     },
+  },
+  head() {
+    return {
+      title: this.$t('nav.contact'),
+    };
   },
 };
 </script>
