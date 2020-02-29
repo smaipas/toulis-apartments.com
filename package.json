@@ -17,6 +17,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.0.1",
+    "@nuxtjs/style-resources": "^1.0.0",
     "date-fns": "^2.9.0",
     "flush-promises": "^1.0.2",
     "jest-mock-axios": "^3.2.0",

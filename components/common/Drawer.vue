@@ -74,12 +74,12 @@ export default {
     transition: color ease-in-out 0.2s;
     text-transform: uppercase;
     &:hover {
-      color: var(--v-primary-base);
+      color: $primary;
     }
   }
 }
 .nav--active {
   font-weight: 500;
-  color: var(--v-primary-base);
+  color: $primary;
 }
 </style>

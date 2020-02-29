@@ -94,6 +94,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
     '@nuxtjs/robots',
     [
       'nuxt-i18n',
@@ -118,6 +119,13 @@ export default {
    */
   axios: {},
   /*
+   ** Style resources module configuration
+   ** See https://github.com/nuxt-community/style-resources-module/
+   */
+  styleResources: {
+    scss: '~/assets/custom-variables.scss',
+  },
+  /*
    ** Robots module configuration
    ** See https://github.com/nuxt-community/robots-module
    */
@@ -127,6 +135,10 @@ export default {
       Allow: '/',
     },
   ],
+  /*
+   ** Sitemap module configuration
+   ** See https://github.com/nuxt-community/sitemap-module#readme
+   */
   sitemap: {
     hostname: 'https://www.toulis-apartments.com',
     gzip: true,
@@ -139,9 +151,6 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      options: {
-        customProperties: true,
-      },
       themes: {
         light: {
           primary: '#409DCD',
