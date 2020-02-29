@@ -15,7 +15,13 @@
           <v-app-bar-nav-icon
             class="d-flex d-sm-none"
             @click.stop="toggleDrawer"
-          />
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" v-on="on">
+                Toggle Menu
+              </v-btn>
+            </template>
+          </v-app-bar-nav-icon>
           <div class="header__lang-selector d-none d-sm-flex">
             <LanguageSelector />
           </div>
