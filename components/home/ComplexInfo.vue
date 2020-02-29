@@ -8,6 +8,9 @@
         <v-col
           v-for="(item, i) in infoItems"
           :key="i"
+          cols="12"
+          sm="6"
+          md="3"
           class="d-flex justify-center"
         >
           <figure elevation="0" class="ci__item">
@@ -67,6 +70,7 @@ export default {
   &__item {
     text-align: center;
     max-width: 20em;
+    padding: 2em 0;
   }
   &__item-title {
     margin: 1.3em 0 0.5em;

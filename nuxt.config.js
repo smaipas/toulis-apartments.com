@@ -9,15 +9,58 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - Toulis Apartments',
+    title: 'Toulis Apartments',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Toulis Apartments, apartments, halkidiki, polychrono, halkidiki apartments, polychrono apartments',
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content:
+          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
+      },
+      {
+        hid: 'ogImage',
+        name: 'ogImage',
+        content: 'https://www.toulis-apartments.com/toulis-logo.jpg',
+      },
+      {
+        hid: 'theme-color',
+        name: 'theme-color',
+        content: '#409DCD',
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'Toulis Apartments',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -25,7 +68,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#409DCD' },
   /*
    ** Global CSS
    */
@@ -51,6 +94,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/robots',
     [
       'nuxt-i18n',
       {
@@ -66,6 +111,7 @@ export default {
         },
       },
     ],
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -73,15 +119,38 @@ export default {
    */
   axios: {},
   /*
+   ** Style resources module configuration
+   ** See https://github.com/nuxt-community/style-resources-module/
+   */
+  styleResources: {
+    scss: '~/assets/custom-variables.scss',
+  },
+  /*
+   ** Robots module configuration
+   ** See https://github.com/nuxt-community/robots-module
+   */
+  robots: [
+    {
+      UserAgent: '*',
+      Allow: '/',
+    },
+  ],
+  /*
+   ** Sitemap module configuration
+   ** See https://github.com/nuxt-community/sitemap-module#readme
+   */
+  sitemap: {
+    hostname: 'https://www.toulis-apartments.com',
+    gzip: true,
+    routes: ['/apartments', '/halkidiki', '/contact'],
+  },
+  /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      options: {
-        customProperties: true,
-      },
       themes: {
         light: {
           primary: '#409DCD',
@@ -100,6 +169,13 @@ export default {
    */
   build: {
     vendor: ['axios', 'vuetify'],
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
     /*
      ** You can extend webpack config here
      */

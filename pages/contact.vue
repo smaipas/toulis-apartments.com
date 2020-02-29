@@ -276,6 +276,11 @@ export default {
       return date ? format(new Date(date), 'dd-MM-yyyy') : '';
     },
   },
+  head() {
+    return {
+      title: this.$t('nav.contact'),
+    };
+  },
 };
 </script>
 

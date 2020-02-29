@@ -4,14 +4,12 @@
       cycle
       hide-delimiter-background
       show-arrows-on-hover
-      height="750"
+      height="50em"
     >
       <v-carousel-item
         v-for="(item, i) in sliderItems"
         :key="i"
         :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
       />
     </v-carousel>
     <section>
@@ -104,6 +102,11 @@ export default {
         { icon: 'bath', title: 'apartments.h1li11' },
         { icon: 'wifi', title: 'apartments.h1li12' },
       ],
+    };
+  },
+  head() {
+    return {
+      title: this.$t('nav.apartments'),
     };
   },
 };

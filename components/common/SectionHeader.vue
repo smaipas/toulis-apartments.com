@@ -23,12 +23,12 @@ export default {
 
 <style lang="scss" scoped>
 .section__header {
-  color: var(--v-accent-lighten1);
+  color: #595959;
   font-size: 1.5em;
   text-transform: uppercase;
   padding: 0.25em 0;
   margin: 1em 0;
-  border-bottom: 1px solid var(--v-accent-lighten5);
+  border-bottom: 1px solid #c1c1c1;
   text-align: center;
 }
 </style>

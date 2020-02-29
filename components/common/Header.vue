@@ -15,7 +15,13 @@
           <v-app-bar-nav-icon
             class="d-flex d-sm-none"
             @click.stop="toggleDrawer"
-          />
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn v-bind="attrs" v-on="on">
+                Toggle Menu
+              </v-btn>
+            </template>
+          </v-app-bar-nav-icon>
           <div class="header__lang-selector d-none d-sm-flex">
             <LanguageSelector />
           </div>
@@ -82,7 +88,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   &__container {
-    border-top: 0.35em solid var(--v-primary-base);
+    border-top: 0.35em solid $primary;
     background-color: white !important;
   }
   &__lang-selector {
@@ -98,7 +104,7 @@ export default {
       cursor: pointer;
       transition: color ease-in-out 0.2s;
       &:hover {
-        color: var(--v-primary-base);
+        color: $primary;
       }
     }
     & :not(:last-child) {
@@ -108,6 +114,6 @@ export default {
 }
 .nav--active {
   font-weight: 500;
-  color: var(--v-primary-base);
+  color: $primary;
 }
 </style>

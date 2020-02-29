@@ -83,6 +83,11 @@ export default {
       imgPolychrono,
     };
   },
+  head() {
+    return {
+      title: this.$t('nav.halkidiki'),
+    };
+  },
 };
 </script>
 
