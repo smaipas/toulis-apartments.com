@@ -4,14 +4,12 @@
       cycle
       hide-delimiter-background
       show-arrows-on-hover
-      height="750"
+      height="50em"
     >
       <v-carousel-item
         v-for="(item, i) in sliderItems"
         :key="i"
         :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
       />
     </v-carousel>
     <section>
