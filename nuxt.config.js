@@ -27,40 +27,56 @@ export default {
           'Toulis Apartments, apartments, halkidiki, polychrono, halkidiki apartments, polychrono apartments',
       },
       {
-        hid: 'og:type',
-        name: 'og:type',
-        content: 'website',
-      },
-      {
-        hid: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Toulis Apartments',
-      },
-      {
-        hid: 'og:title',
-        name: 'og:title',
-        content: 'Toulis Apartments',
-      },
-      {
-        hid: 'og:description',
-        name: 'og:description',
-        content:
-          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
-      },
-      {
-        hid: 'ogImage',
-        name: 'ogImage',
-        content: 'https://www.toulis-apartments.com/toulis-logo.jpg',
-      },
-      {
         hid: 'theme-color',
         name: 'theme-color',
         content: '#409DCD',
       },
       {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.toulis-apartments.com/toulis-logo.jpg',
+      },
+      {
         hid: 'apple-mobile-web-app-title',
         name: 'apple-mobile-web-app-title',
         content: 'Toulis Apartments',
+      },
+      {
+        hid: 'itemprop-title',
+        itemprop: 'name',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'itemprop-description',
+        itemprop: 'description',
+        content:
+          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
+      },
+      {
+        hid: 'itemprop-image',
+        itemprop: 'image',
+        content: 'https://www.toulis-apartments.com/toulis-logo.jpg',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
