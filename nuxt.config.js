@@ -160,6 +160,13 @@ export default {
    */
   build: {
     vendor: ['axios', 'vuetify'],
+    terser: {
+      terserOptions: {
+        compress: {
+          drop_console: true,
+        },
+      },
+    },
     /*
      ** You can extend webpack config here
      */
