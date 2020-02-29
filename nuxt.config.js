@@ -9,15 +9,58 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - Toulis Apartments',
+    title: 'Toulis Apartments',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'Toulis Apartments, apartments, halkidiki, polychrono, halkidiki apartments, polychrono apartments',
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Toulis Apartments',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content:
+          'Toulis Apartments - Apartments located in Polychrono at the first peninsula of Halkidiki',
+      },
+      {
+        hid: 'ogImage',
+        name: 'ogImage',
+        content: 'https://www.toulis-apartments.com/toulis-logo.jpg',
+      },
+      {
+        hid: 'theme-color',
+        name: 'theme-color',
+        content: '#409DCD',
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'Toulis Apartments',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -25,7 +68,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#409DCD' },
   /*
    ** Global CSS
    */

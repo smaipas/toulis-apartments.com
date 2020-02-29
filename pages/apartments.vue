@@ -106,6 +106,11 @@ export default {
       ],
     };
   },
+  head() {
+    return {
+      title: this.$t('nav.apartments'),
+    };
+  },
 };
 </script>
 
