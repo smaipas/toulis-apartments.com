@@ -94,6 +94,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/robots',
     [
       'nuxt-i18n',
       {
@@ -109,12 +110,28 @@ export default {
         },
       },
     ],
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  /*
+   ** Robots module configuration
+   ** See https://github.com/nuxt-community/robots-module
+   */
+  robots: [
+    {
+      UserAgent: '*',
+      Allow: '/',
+    },
+  ],
+  sitemap: {
+    hostname: 'https://www.toulis-apartments.com',
+    gzip: true,
+    routes: ['/apartments', '/halkidiki', '/contact'],
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
