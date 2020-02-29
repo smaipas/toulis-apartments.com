@@ -92,12 +92,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~/plugins/validation.js',
-    '~/plugins/api.js',
-    '~/plugins/google-analytics.js',
-    { src: '~/plugins/google-analytics.js', mode: 'client' },
-  ],
+  plugins: ['~/plugins/validation.js', '~/plugins/api.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -107,6 +102,8 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
+    // Doc: https://github.com/nuxt-community/gtm-module
+    '@nuxtjs/gtm',
   ],
   /*
    ** Nuxt.js modules
@@ -164,6 +161,13 @@ export default {
     hostname: 'https://www.toulis-apartments.com',
     gzip: true,
     routes: ['/apartments', '/halkidiki', '/contact'],
+  },
+  /*
+   ** Google Tag Manager module configuration
+   ** See https://github.com/nuxt-community/gtm-module
+   */
+  gtm: {
+    id: 'GTM-57NXTCK',
   },
   /*
    ** vuetify module configuration
