@@ -92,7 +92,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/validation.js', '~/plugins/api.js'],
+  plugins: [
+    '~/plugins/validation.js',
+    '~/plugins/api.js',
+    '~/plugins/google-analytics.js',
+    { src: '~/plugins/google-analytics.js', mode: 'client' },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
