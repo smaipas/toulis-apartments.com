@@ -4,7 +4,7 @@
       cycle
       hide-delimiter-background
       show-arrows-on-hover
-      height="50em"
+      :height="carouselImagesHeight"
     >
       <v-carousel-item
         v-for="(item, i) in sliderItems"
@@ -23,7 +23,7 @@
           cols="12"
           lg="2"
           md="3"
-          sm="6"
+          sm="4"
           class="d-flex justify-center"
         >
           <figure class="facility__item">
@@ -103,6 +103,17 @@ export default {
         { icon: 'wifi', title: 'apartments.h1li12' },
       ],
     };
+  },
+  computed: {
+    /**
+     * Carousel images height.
+     */
+    carouselImagesHeight() {
+      if (this.$vuetify.breakpoint.xs) return '30em';
+      if (this.$vuetify.breakpoint.sm) return '35em';
+      if (this.$vuetify.breakpoint.md) return '40em';
+      return '50em';
+    },
   },
   head() {
     return {
