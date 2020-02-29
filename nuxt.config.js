@@ -184,7 +184,6 @@ export default {
    ** Build configuration
    */
   build: {
-    vendor: ['axios', 'vuetify'],
     terser: {
       terserOptions: {
         compress: {
