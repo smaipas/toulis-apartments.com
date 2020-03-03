@@ -168,6 +168,8 @@ export default {
    */
   gtm: {
     id: 'GTM-57NXTCK',
+    autoInit: false,
+    respectDoNotTrack: true,
   },
   /*
    ** vuetify module configuration
