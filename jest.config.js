@@ -1,4 +1,6 @@
 module.exports = {
+  setupFilesAfterEnv: ['./jest.setup.js'],
+  setupFiles: ['jest-localstorage-mock'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
