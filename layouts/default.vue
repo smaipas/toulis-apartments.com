@@ -9,6 +9,7 @@
     <v-content>
       <nuxt />
     </v-content>
+    <Gdpr />
     <Footer />
   </v-app>
 </template>
@@ -20,10 +21,11 @@
 import Header from '@/components/common/Header.vue';
 import Footer from '@/components/common/Footer.vue';
 import Drawer from '@/components/common/Drawer.vue';
+import Gdpr from '@/components/common/Gdpr.vue';
 
 export default {
   name: 'DefaultLayout',
-  components: { Header, Footer, Drawer },
+  components: { Header, Footer, Drawer, Gdpr },
   data() {
     return {
       drawer: false,
