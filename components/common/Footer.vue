@@ -1,10 +1,13 @@
 <template>
   <v-footer app dark>
     <v-container>
-      <span>
-        &copy; {{ new Date().getFullYear() }} Toulis Apartments. All Rights
-        Reserved.
-      </span>
+      <div class="footer__container">
+        <div>
+          &copy; {{ new Date().getFullYear() }} Toulis Apartments. All Rights
+          Reserved.
+        </div>
+        <div>{{ $t('footer.regNumber') }}</div>
+      </div>
     </v-container>
   </v-footer>
 </template>
@@ -15,4 +18,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+</style>

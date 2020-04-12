@@ -6,11 +6,36 @@
       show-arrows-on-hover
       :height="carouselImagesHeight"
     >
-      <v-carousel-item
-        v-for="(item, i) in sliderItems"
-        :key="i"
-        :src="item.src"
-      />
+      <v-carousel-item v-for="n in 14" :key="n">
+        <picture>
+          <source
+            media="(max-width: 800px)"
+            type="image/webp"
+            :srcset="require(`~/assets/images/apartments/photo${n}-sm.webp`)"
+          />
+          <source
+            media="(max-width: 800px)"
+            :srcset="require(`~/assets/images/apartments/photo${n}-sm.jpg`)"
+          />
+          <source
+            media="(max-width: 1200px)"
+            type="image/webp"
+            :srcset="require(`~/assets/images/apartments/photo${n}-md.webp`)"
+          />
+          <source
+            media="(max-width: 1200px)"
+            :srcset="require(`~/assets/images/apartments/photo${n}-md.jpg`)"
+          />
+          <source
+            type="image/webp"
+            :srcset="require(`~/assets/images/apartments/photo${n}-lg.webp`)"
+          />
+          <img
+            :src="require(`~/assets/images/apartments/photo${n}-lg.jpg`)"
+            alt="Toulis apartments in Polychrono"
+          />
+        </picture>
+      </v-carousel-item>
     </v-carousel>
     <section>
       <SectionHeader margin="3em 0 1em">
@@ -56,38 +81,12 @@
  * Apartments page.
  */
 import SectionHeader from '@/components/common/SectionHeader.vue';
-import apartments1 from '@/assets/images/apartments/photo1.jpg';
-import apartments2 from '@/assets/images/apartments/photo2.jpg';
-import apartments3 from '@/assets/images/apartments/photo3.jpg';
-import apartments4 from '@/assets/images/apartments/photo4.jpg';
-import apartments5 from '@/assets/images/apartments/photo5.jpg';
-import apartments6 from '@/assets/images/apartments/photo6.jpg';
-import apartments7 from '@/assets/images/apartments/photo7.jpg';
-import apartments8 from '@/assets/images/apartments/photo8.jpg';
-import apartments9 from '@/assets/images/apartments/photo9.jpg';
-import apartments10 from '@/assets/images/apartments/photo10.jpg';
-import apartments11 from '@/assets/images/apartments/photo11.jpg';
-import apartments12 from '@/assets/images/apartments/photo12.jpg';
 
 export default {
   name: 'Apartments',
   components: { SectionHeader },
   data() {
     return {
-      sliderItems: [
-        { src: apartments1 },
-        { src: apartments2 },
-        { src: apartments3 },
-        { src: apartments4 },
-        { src: apartments5 },
-        { src: apartments6 },
-        { src: apartments7 },
-        { src: apartments8 },
-        { src: apartments9 },
-        { src: apartments10 },
-        { src: apartments11 },
-        { src: apartments12 },
-      ],
       facilityItems: [
         { icon: 'reception', title: 'apartments.h1li1' },
         { icon: 'garden', title: 'apartments.h1li2' },
@@ -124,6 +123,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+picture {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  & > img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
+}
 .facility {
   &__item {
     text-align: center;

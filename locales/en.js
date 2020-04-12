@@ -126,4 +126,7 @@ export default {
     moreInfo: 'More info',
     send: 'Send',
   },
+  footer: {
+    regNumber: '',
+  },
 };
