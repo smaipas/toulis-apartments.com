@@ -124,4 +124,7 @@ export default {
     moreInfo: 'Περισσότερες πληροφορίες',
     send: 'Αποστολη',
   },
+  footer: {
+    regNumber: 'ΜΗΤΕ: 0938K112K0732800',
+  },
 };

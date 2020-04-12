@@ -124,4 +124,7 @@ export default {
     moreInfo: 'Više informacija',
     send: 'Poslati',
   },
+  footer: {
+    regNumber: '',
+  },
 };
