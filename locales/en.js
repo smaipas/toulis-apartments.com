@@ -20,7 +20,7 @@ export default {
       p2: 'Only 200m away from the wonderful beach.',
       h3: 'Close to all amenities',
       p3:
-        'Restaurant: 20m, Cafe-bar: 30m, Supermarket: 50m, Farmacy: 30m, Bakery: 10m',
+        'Restaurant: 20m, Cafe-bar: 150m, Supermarket: 120m, Pharmacy: 30m, Bakery: 100m',
       h4: 'Pleasant Stay',
       p4:
         'A quiet and beautiful environment maintained for years in a place with hospitality to enjoy your vacation and well rested.',
