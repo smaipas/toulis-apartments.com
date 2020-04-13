@@ -43,7 +43,7 @@ export default {
     h2: 'PRICES AND SPECIAL OFFERS',
     h2p1a: 'Special offer',
     h2p1b: 'for May:',
-    h2p2a: '25€',
+    h2p2a: '30€',
     h2p2b: '/ night',
   },
   halkidiki: {

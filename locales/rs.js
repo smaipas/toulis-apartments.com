@@ -43,7 +43,7 @@ export default {
     h2: 'CENE I SPECIJALNA PONUDA',
     h2p1a: 'Specijalna ponuda',
     h2p1b: 'u maju:',
-    h2p2a: '25€',
+    h2p2a: '30€',
     h2p2b: '/ noć',
   },
   halkidiki: {
