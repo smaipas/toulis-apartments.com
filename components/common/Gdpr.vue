@@ -9,7 +9,7 @@
       <div class="gdpr__header">Our website uses cookies</div>
       <div class="my-3">
         We are always working to improve our website services for our users. To
-        do this, we use the anonymous data provides by cookies.
+        do this, we use the anonymous data provided by cookies.
       </div>
       <div class="mt-5 mb-2">
         <v-btn data-test="iDisagreeBtn" @click="gtmInit(false)">
