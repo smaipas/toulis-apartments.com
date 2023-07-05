@@ -19,7 +19,7 @@ service: toulis-apartments
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
   profile: sotiris
   region: eu-west-1
 
@@ -27,7 +27,7 @@ provider:
 #  stage: dev
 
 # you can define service wide environment variables here
-  environment:
+  AwsEnvironment:
   iamRoleStatements:
     - Effect: "Allow"
       Action:

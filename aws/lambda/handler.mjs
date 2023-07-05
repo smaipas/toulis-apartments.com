@@ -1,8 +1,6 @@
-'use strict';
+import { SESClient, SendTemplatedEmailCommand } from "@aws-sdk/client-ses";
+const ses = new SESClient({ region: "eu-west-1" });
 
-const AWS = require('aws-sdk');
-
-const ses = new AWS.SES();
 const FROM = 'contact@toulis-apartments.com';
 const TO = 'toulis79@gmail.com';
 
@@ -41,12 +39,18 @@ function generateEmailParams(data) {
   };
 }
 
-module.exports.submitReservationForm = async (event) => {
+export const submitReservationForm = async (event) => {
+  const emailParams = generateEmailParams(event.body);
+  const command = new SendTemplatedEmailCommand(emailParams);
+
   try {
-    const emailParams = generateEmailParams(event.body);
-    const data = await ses.sendTemplatedEmail(emailParams).promise();
-    return generateResponse(200, data);
-  } catch (err) {
-    return generateError(500, err);
+    let response = await ses.send(command);
+    return generateResponse(200, response);
   }
+  catch (error) {
+    return generateError(500, error);
+  }
+  // finally {
+  //   // finally.
+  // }
 };
