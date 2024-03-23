@@ -60,7 +60,7 @@
         </v-col>
       </v-row>
     </section>
-    <section>
+    <!-- <section>
       <SectionHeader margin="3em 0 1.5em">
         {{ $t('apartments.h2') }}
       </SectionHeader>
@@ -72,7 +72,7 @@
         <strong>{{ $t('apartments.h2p2a') }}</strong>
         {{ $t('apartments.h2p2b') }}
       </p>
-    </section>
+    </section> -->
   </v-container>
 </template>
 
